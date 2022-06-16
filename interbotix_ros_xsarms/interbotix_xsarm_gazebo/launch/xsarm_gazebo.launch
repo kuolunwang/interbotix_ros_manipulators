@@ -12,7 +12,7 @@
   <arg name="world_name"                        default="$(find interbotix_xsarm_gazebo)/worlds/xsarm_gazebo.world"/>
   <arg name="gui"                               default="true"/>
   <arg name="debug"                             default="false"/>
-  <arg name="paused"                            default="true"/>
+  <arg name="paused"                            default="false"/>
   <arg name="recording"                         default="false"/>
   <arg name="use_sim_time"                      default="true"/>
   <arg name="use_position_controllers"          default="false"/>

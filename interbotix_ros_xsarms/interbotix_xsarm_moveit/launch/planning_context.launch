@@ -9,15 +9,15 @@
   <arg name="external_srdf_loc" default=""/>
   <arg name="dof"        default=""/>
   <!-- The name of the parameter under which the URDF is loaded -->
-  <arg name="robot_description" default="robot_description"/>
+  <arg name="robot_description" default="/robot/robot_description"/>
 
   <!-- Load universal robot description format (URDF) -->
-  <param if="$(arg load_robot_description)" name="$(arg robot_description)" command="xacro $(find interbotix_xsarm_descriptions)/urdf/$(arg robot_model).urdf.xacro"/>
+  <param if="$(arg load_robot_description)" name="$(arg robot_description)" command="xacro $(find interbotix_xsarm_descriptions)/urdf/vx300s.urdf.xacro"/>
 
   <!-- The semantic description that corresponds to the URDF -->
   <param name="$(arg robot_description)_semantic"
-    command="xacro $(find interbotix_xsarm_moveit)/config/srdf/$(arg robot_model).srdf.xacro
-        robot_name:=$(arg robot_name)
+    command="xacro $(find interbotix_xsarm_moveit)/config/srdf/vx300s.srdf.xacro
+        robot_name:=vx300s
         base_link_frame:=$(arg base_link_frame)
         show_ar_tag:=$(arg show_ar_tag)
         external_srdf_loc:=$(arg external_srdf_loc)"/>
